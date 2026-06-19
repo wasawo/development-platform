@@ -60,7 +60,7 @@ Claude serves as the primary architect for requirements analysis, documentation 
   - Manage document versions and history
   - Track document priorities per the SSoT hierarchy
   - Ensure traceability between requirements → design → code
-  - Create ADR (Architecture Decision Records)
+  - Assists ADR (Architecture Decision Records) documentation
 
 #### 1.3 Phase Design & Planning
 
@@ -217,7 +217,7 @@ Gemini serves as the research specialist with access to the latest information a
 
 #### 3.2 Ecosystem Intelligence
 
-- **Google Ecosystem Expertise**
+- **Cloud & Ecosystem Research**
   - Research Google Cloud services and APIs
   - Understand Google ecosystem integrations
   - Track Google service updates and changes
@@ -530,7 +530,20 @@ Context: [Existing code or architecture]
 
 ---
 
-## 9. Related Documents
+## 10. AI Escalation Matrix
+
+| Task         | Primary | Secondary |
+| ------------ | ------- | --------- |
+| Charter      | Claude  | ChatGPT   |
+| Requirements | Claude  | ChatGPT   |
+| Architecture | ChatGPT | Claude    |
+| Research     | Gemini  | ChatGPT   |
+| Coding       | Copilot | ChatGPT   |
+| Testing      | ChatGPT | Copilot   |
+
+---
+
+## 11. Related Documents
 
 - [Project Charter](./charter/project-charter.md) — Overall project direction
 - [Development Principles](./charter/project-charter.md#14-development-principles) — Guiding values
