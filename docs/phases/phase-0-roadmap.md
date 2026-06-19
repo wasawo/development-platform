@@ -11,7 +11,8 @@
 
 Phase 0 is the **foundation phase** spanning 4 sequential phases (0-1 through 0-4) to establish a complete AI-assisted development platform. This roadmap details all activities, deliverables, and success metrics, with complete traceability to the Project Charter.
 
-**Total Duration**: ~10 weeks (June - September 2026)
+**Estimated Total Duration**: ~10 weeks (June - September 2026)  
+**Note**: This represents the planned timeline. Actual durations may vary based on complexity and resource availability.
 
 ---
 
@@ -20,12 +21,12 @@ Phase 0 is the **foundation phase** spanning 4 sequential phases (0-1 through 0-
 | Phase | Title                   | Duration | Goal                                       | Status     |
 | ----- | ----------------------- | -------- | ------------------------------------------ | ---------- |
 | 0-1   | Management Foundation   | 2 weeks  | Documentation & AI collaboration framework | 🟢 Active  |
-| 0-2   | PC Environment Setup    | 3 weeks  | Configure development machines             | 🔲 Pending |
-| 0-3   | Execution Foundation    | 3 weeks  | Containerized environment operational      | 🔲 Pending |
+| 0-2   | Local Dev Environment   | 3 weeks  | Configure local development machines       | 🔲 Pending |
+| 0-3   | Containerization & Exec | 3 weeks  | Docker and containerized environment ready | 🔲 Pending |
 | 0-4   | Automation & Completion | 2 weeks  | CI/CD & project template complete          | 🔲 Pending |
 
 **Overall Project Status**: Phase 0-1 In Progress  
-**Target Completion**: 2026-09-14
+**Estimated Completion**: 2026-09-14 (target date, subject to change)
 
 ---
 
@@ -37,6 +38,17 @@ Phase 0 is the **foundation phase** spanning 4 sequential phases (0-1 through 0-
 - All 6 Success Criteria assigned to deliverables
 - All 9 Deliverables scheduled across phases
 - See [PHASE_0_ANALYSIS.md](./PHASE_0_ANALYSIS.md) for detailed mapping
+
+### Lightweight Traceability Matrix
+
+| Charter Objective             | Roadmap Phase | Primary Activities                     |
+| ----------------------------- | ------------- | -------------------------------------- |
+| 1. Documentation Framework    | 0-1, 0-4      | Charter, Doc Structure, ADR, Templates |
+| 2. Development Environments   | 0-2, 0-3      | Local Setup, Docker Standardization    |
+| 3. AI Collaboration Workflows | 0-1           | AI Roles, Collaboration Framework      |
+| 4. Reusable Project Templates | 0-3, 0-4      | Sample API, Project Template           |
+| 5. Linux-based Execution      | 0-2, 0-3      | Ubuntu Setup, Docker & Containers      |
+| 6. Infrastructure Preparation | 0-3, 0-4      | Docker, CI/CD, Automation              |
 
 ---
 
@@ -81,7 +93,7 @@ Phase 0 is the **foundation phase** spanning 4 sequential phases (0-1 through 0-
 
 | Task                    | Description                                            | Owner  | Status      | Acceptance Criteria               |
 | ----------------------- | ------------------------------------------------------ | ------ | ----------- | --------------------------------- |
-| Create folder hierarchy | Build complete docs/ directory structure per Section 8 | DevOps | ✅ Complete | All 8 subdirs created + committed |
+| Create folder hierarchy | Build complete docs/ directory structure per Section 8 | wasawo | ✅ Complete | All 8 subdirs created + committed |
 | Define folder purposes  | Document purpose of each folder                        | Claude | ✅ Complete | README or structure guide created |
 | Establish standards     | Define document naming, versioning, format             | Claude | 🟡 Pending  | Standards guide in docs/          |
 
@@ -137,9 +149,19 @@ docs/
 
 ---
 
-## 0-1.4: Documentation Completeness
+## 0-1.4: ADR Foundation & Documentation Standards
 
-### Sub-task: Create Documentation Standards Guide
+### Sub-task A: Create ADR Template and Foundation
+
+**Charter Ref**: Section 4 Principle: "Documentation First" | Objective 1
+
+| Task          | Description                                    | Owner   | Status     | Acceptance Criteria              |
+| ------------- | ---------------------------------------------- | ------- | ---------- | -------------------------------- |
+| ADR template  | Create Architecture Decision Records template  | ChatGPT | 🟡 Pending | ADR template in docs/adr/        |
+| ADR-0000      | Record: Docker/Dev Container adoption decision | ChatGPT | 🟡 Pending | ADR-0000 documented in docs/adr/ |
+| ADR directory | Initialize docs/adr/ with README and standards | Claude  | 🟡 Pending | README and guidelines created    |
+
+### Sub-task B: Create Documentation Standards Guide
 
 **Charter Ref**: Section 4 Principle: "Documentation First"
 
@@ -153,62 +175,67 @@ docs/
 
 - docs/charter/project-charter.md ✅
 - docs/operations/ai-roles.md ✅
+- docs/adr/README.md (to create) 🔲
 - docs/README.md (to create) 🔲
 
 ---
 
 ## Phase 0-1 Success Criteria Verification
 
-| Success Criterion                              | Deliverable                                     | Status         | Evidence           |
-| ---------------------------------------------- | ----------------------------------------------- | -------------- | ------------------ |
-| All document templates created and versioned   | Project Charter, AI Roles, Docs Structure       | ✅ In Progress | 2 of 3 complete    |
-| AI role definitions documented and operational | AI Roles document (docs/operations/ai-roles.md) | ✅ Complete    | Document committed |
+| Success Criterion                              | Deliverable                                     | Status         | Evidence            |
+| ---------------------------------------------- | ----------------------------------------------- | -------------- | ------------------- |
+| All document templates created and versioned   | Project Charter, AI Roles, Docs Structure, ADR  | ✅ In Progress | 2 of 4 complete     |
+| AI role definitions documented and operational | AI Roles document (docs/operations/ai-roles.md) | ✅ Complete    | Document committed  |
+| ADR foundation established                     | ADR template, ADR-0000, docs/adr/ structure     | 🟡 Pending     | Foundation template |
 
-**Phase 0-1 Completion**: 75% (3 of 4 core tasks complete)
+**Phase 0-1 Completion**: 60% (3 of 5 core tasks complete)
 
 ---
 
-# Phase 0-2: PC Environment Setup
+# Phase 0-2: Local Development Environment
 
 **Status**: 🔲 **Pending**  
-**Duration**: 3 weeks | **Start**: 2026-07-04 | **Target**: 2026-07-31  
-**Goal**: Configure both development machines with consistent tooling.
+**Duration**: 3 weeks | **Start**: 2026-07-04 | **Estimated Target**: 2026-07-31  
+**Goal**: Configure both development machines with foundational local development tools and environments.
 
 ## Charter Reference
 
 **Objectives**: Objective 2 (Dev Environments) + Objective 5 (Linux Execution)  
 **Success Criteria**:
 
-- Docker / Dev Container setup working on both PCs (Phase 0-3)
-- PC2 running Ubuntu 24.04 with Docker
+- Windows PC1 configured with development tools (Git, VS Code, Python, Node.js)
+- Ubuntu 24.04 installed on PC2 with development tools
+
+**Note**: Containerization and Docker setup occur in Phase 0-3
 
 ---
 
 ## 0-2.1: Windows Development Environment (PC1)
 
-### Deliverable: Windows Dev Environment Config (docs/ + .devcontainer/)
+### Deliverable: Windows Local Dev Environment Config (docs/operations/)
 
 **Charter Ref**: Section 8, Deliverable 4 | Objective: Obj 2
 
-| Task                  | Description                             | Owner   | Target     | Acceptance Criteria                     |
-| --------------------- | --------------------------------------- | ------- | ---------- | --------------------------------------- |
-| Requirements analysis | Define dev environment tools & versions | ChatGPT | 2026-07-08 | Tool list & version specs               |
-| Configuration guide   | Create setup guide for PC1 Windows 11   | Claude  | 2026-07-15 | Step-by-step guide in docs/operations/  |
-| Dev Container setup   | Create .devcontainer/ configuration     | Copilot | 2026-07-22 | Dockerfile, devcontainer.json committed |
-| Validation            | Test on PC1, document results           | wasawo  | 2026-07-29 | Setup tested, documented                |
+| Task                  | Description                             | Owner   | Target     | Acceptance Criteria                    |
+| --------------------- | --------------------------------------- | ------- | ---------- | -------------------------------------- |
+| Requirements analysis | Define dev tools & versions for Windows | ChatGPT | 2026-07-08 | Tool list & version specs              |
+| Configuration guide   | Create setup guide for PC1 Windows 11   | Claude  | 2026-07-15 | Step-by-step guide in docs/operations/ |
+| Local tooling setup   | Git, VS Code, Python, Node.js config    | Copilot | 2026-07-22 | Setup instructions documented          |
+| Validation            | Test on PC1, document results           | wasawo  | 2026-07-29 | Setup tested, documented               |
 
 **Deliverable Locations**:
 
-- `docs/operations/` - Setup guide
-- `.devcontainer/` - Dev container configuration
+- `docs/operations/windows-setup.md` - Local setup guide
 
-**Traceability**: ← Objective 2 | Success Criteria: Docker setup working
+**Traceability**: ← Objective 2 | Success Criteria: Dev environment configured (local)
+
+**Note**: Dev Container and Docker configuration occurs in Phase 0-3
 
 ---
 
-## 0-2.2: Linux Execution Environment (PC2)
+## 0-2.2: Linux Development Environment (PC2)
 
-### Deliverable: Ubuntu 24.04 Setup Guide (docs/operations/)
+### Deliverable: Ubuntu 24.04 Local Setup Guide (docs/operations/)
 
 **Charter Ref**: Section 8, Deliverable 5 | Objective: Obj 5
 
@@ -216,44 +243,47 @@ docs/
 | ------------------- | -------------------------------------- | ------- | ---------- | ---------------------------------- |
 | Migration plan      | Plan PC2 migration to Ubuntu 24.04     | ChatGPT | 2026-07-08 | Migration plan documented          |
 | Installation guide  | Create Ubuntu 24.04 installation guide | Gemini  | 2026-07-15 | Detailed guide in docs/operations/ |
-| Post-install config | Configure Ubuntu with required tools   | Claude  | 2026-07-22 | Configuration steps documented     |
+| Local tooling setup | Install Git, VS Code, Python, Node.js  | Claude  | 2026-07-22 | Configuration steps documented     |
 | Validation          | Test PC2 setup, verify functionality   | wasawo  | 2026-07-29 | Setup verified, documented         |
 
 **Deliverable Locations**:
 
-- `docs/operations/` - Ubuntu setup guide
-- `docs/operations/` - Post-installation configuration
+- `docs/operations/ubuntu-setup.md` - Ubuntu installation guide
+- `docs/operations/linux-dev-tools.md` - Local development tools config
 
-**Traceability**: ← Objective 5 | Success Criteria: PC2 running Ubuntu 24.04
+**Traceability**: ← Objective 5 | Success Criteria: PC2 running Ubuntu 24.04 with local dev tools
+
+**Note**: Docker and containerization setup occurs in Phase 0-3
 
 ---
 
 ## Phase 0-2 Success Criteria Verification
 
-| Success Criterion                   | Deliverable           | Target Status |
-| ----------------------------------- | --------------------- | ------------- |
-| Windows dev environment operational | docs/, .devcontainer/ | 2026-07-29 ✅ |
-| PC2 Ubuntu 24.04 operational        | docs/operations/      | 2026-07-29 ✅ |
+| Success Criterion                        | Deliverable      | Estimated Status |
+| ---------------------------------------- | ---------------- | ---------------- |
+| Windows local dev environment configured | docs/operations/ | 2026-07-29 ✅    |
+| PC2 Ubuntu 24.04 with local tools ready  | docs/operations/ | 2026-07-29 ✅    |
 
 ---
 
-# Phase 0-3: Execution Foundation
+# Phase 0-3: Containerization & Execution Foundation
 
 **Status**: 🔲 **Pending**  
-**Duration**: 3 weeks | **Start**: 2026-08-01 | **Target**: 2026-08-31  
-**Goal**: Establish containerized execution environment.
+**Duration**: 3 weeks | **Start**: 2026-08-01 | **Estimated Target**: 2026-08-31  
+**Goal**: Establish Docker and containerized execution environment for consistent cross-platform deployment.
 
 ## Charter Reference
 
-**Objectives**: Objective 2 + Objective 4 (Templates) + Objective 5 + Objective 6 (Infrastructure)  
+**Objectives**: Objective 2 (Dev Environments) + Objective 4 (Templates) + Objective 5 (Linux) + Objective 6 (Infrastructure)  
 **Success Criteria**:
 
-- Docker / Dev Container setup working on both PCs ✅ (Completed in Phase 0-2)
-- At least one project template validated
+- Docker / Dev Container standardization complete
+- Dev environment containers working on both PC1 and PC2
+- Sample API containerized and operational
 
 ---
 
-## 0-3.1: Docker & Dev Container Standardization
+## 0-3.1: Docker & Containerization Standardization
 
 ### Deliverable: Docker / Dev Container Setup (infra/ + .devcontainer/)
 
@@ -264,7 +294,7 @@ docs/
 | Design container architecture | Define container strategy for both PCs          | ChatGPT | 2026-08-05 | Architecture document in docs/architecture/ |
 | Create Dockerfile             | Build Docker image for dev environment          | Copilot | 2026-08-12 | Dockerfile in .devcontainer/ and infra/     |
 | Create compose file           | Docker Compose for multi-container setup        | Copilot | 2026-08-19 | docker-compose.yml in infra/                |
-| Test on both PCs              | Validate setup on PC1 (Windows) and PC2 (Linux) | wasawo  | 2026-08-28 | Test results documented                     |
+| Cross-platform validation     | Validate setup on PC1 (Windows) and PC2 (Linux) | wasawo  | 2026-08-28 | Test results documented                     |
 
 **Deliverable Locations**:
 
@@ -300,17 +330,18 @@ docs/
 
 ## Phase 0-3 Success Criteria Verification
 
-| Success Criterion             | Deliverable            | Target Status |
-| ----------------------------- | ---------------------- | ------------- |
-| Docker setup working both PCs | .devcontainer/, infra/ | 2026-08-28 ✅ |
-| Project template validated    | Sample API             | 2026-08-30 ✅ |
+| Success Criterion                        | Deliverable            | Estimated Status |
+| ---------------------------------------- | ---------------------- | ---------------- |
+| Docker setup working on both PCs         | .devcontainer/, infra/ | 2026-08-28 ✅    |
+| Sample API containerized and operational | infra/sample-api/      | 2026-08-30 ✅    |
+| Dev Container standardization complete   | docs/architecture/     | 2026-08-30 ✅    |
 
 ---
 
 # Phase 0-4: Automation and Completion
 
 **Status**: 🔲 **Pending**  
-**Duration**: 2 weeks | **Start**: 2026-09-01 | **Target**: 2026-09-14  
+**Duration**: 2 weeks | **Start**: 2026-09-01 | **Estimated Target**: 2026-09-14  
 **Goal**: Complete automation infrastructure and project templates.
 
 ## Charter Reference
@@ -388,11 +419,11 @@ docs/
 
 ## Phase 0-4 Success Criteria Verification
 
-| Success Criterion                | Deliverable        | Target Status |
-| -------------------------------- | ------------------ | ------------- |
-| CI/CD operational GitHub Actions | .github/workflows/ | 2026-09-12 ✅ |
-| Project template validated       | templates/         | 2026-09-13 ✅ |
-| All document templates complete  | docs/              | 2026-09-14 ✅ |
+| Success Criterion                | Deliverable        | Estimated Status |
+| -------------------------------- | ------------------ | ---------------- |
+| CI/CD operational GitHub Actions | .github/workflows/ | 2026-09-12 ✅    |
+| Project template validated       | templates/         | 2026-09-13 ✅    |
+| All document templates complete  | docs/              | 2026-09-14 ✅    |
 
 ---
 
@@ -415,17 +446,18 @@ docs/
 
 ## 📊 Deliverables Summary
 
-| Phase | Deliverable             | Location               | Owner        | Status      |
-| ----- | ----------------------- | ---------------------- | ------------ | ----------- |
-| 0-1   | Project Charter         | docs/charter/          | wasawo       | ✅ Complete |
-| 0-1   | Documentation structure | docs/                  | DevOps       | ✅ Complete |
-| 0-1   | AI role definitions     | docs/operations/       | Claude/Team  | ✅ Complete |
-| 0-2   | Windows dev config      | .devcontainer/, docs/  | DevOps       | 🔲 Pending  |
-| 0-2   | Ubuntu 24.04 setup      | docs/operations/       | DevOps       | 🔲 Pending  |
-| 0-3   | Docker / Dev Container  | .devcontainer/, infra/ | DevOps       | 🔲 Pending  |
-| 0-3   | Sample API              | infra/                 | Copilot/Team | 🔲 Pending  |
-| 0-4   | GitHub Actions CI/CD    | .github/workflows/     | DevOps       | 🔲 Pending  |
-| 0-4   | Project template        | templates/             | Claude/Team  | 🔲 Pending  |
+| Phase | Deliverable               | Location               | Owner          | Status      |
+| ----- | ------------------------- | ---------------------- | -------------- | ----------- |
+| 0-1   | Project Charter           | docs/charter/          | wasawo         | ✅ Complete |
+| 0-1   | Documentation structure   | docs/                  | wasawo         | ✅ Complete |
+| 0-1   | AI role definitions       | docs/operations/       | Claude/Team    | ✅ Complete |
+| 0-1   | ADR foundation            | docs/adr/              | ChatGPT/wasawo | 🔲 Pending  |
+| 0-2   | Windows local dev setup   | docs/operations/       | Copilot/wasawo | 🔲 Pending  |
+| 0-2   | Ubuntu 24.04 setup        | docs/operations/       | Gemini/Claude  | 🔲 Pending  |
+| 0-3   | Docker / Containerization | .devcontainer/, infra/ | Copilot/wasawo | 🔲 Pending  |
+| 0-3   | Sample API                | infra/                 | Copilot/Team   | 🔲 Pending  |
+| 0-4   | GitHub Actions CI/CD      | .github/workflows/     | Copilot/wasawo | 🔲 Pending  |
+| 0-4   | Project template          | templates/             | Claude/Team    | 🔲 Pending  |
 
 **Total**: 9/9 deliverables tracked ✅
 
@@ -433,12 +465,12 @@ docs/
 
 ## 🎯 Key Milestones
 
-| Milestone            | Date           | Phase | Deliverable                 |
-| -------------------- | -------------- | ----- | --------------------------- |
-| Phase 0-1 Complete   | 2026-07-03     | 0-1   | Charter, Docs, AI Roles     |
-| Phase 0-2 Complete   | 2026-07-31     | 0-2   | PC environments operational |
-| Phase 0-3 Complete   | 2026-08-31     | 0-3   | Docker & Sample API ready   |
-| **Phase 0 Complete** | **2026-09-14** | 0-4   | CI/CD & Templates ready     |
+| Milestone            | Estimated Date | Phase | Deliverable                  |
+| -------------------- | -------------- | ----- | ---------------------------- |
+| Phase 0-1 Complete   | 2026-07-03     | 0-1   | Charter, Docs, AI Roles, ADR |
+| Phase 0-2 Complete   | 2026-07-31     | 0-2   | Local dev environments ready |
+| Phase 0-3 Complete   | 2026-08-31     | 0-3   | Docker & Sample API ready    |
+| **Phase 0 Complete** | **2026-09-14** | 0-4   | CI/CD & Templates ready      |
 
 ---
 
@@ -453,10 +485,11 @@ docs/
 
 ## Document History
 
-| Version | Date       | Author | Changes                                         |
-| ------- | ---------- | ------ | ----------------------------------------------- |
-| 1.0.0   | 2026-06-19 | wasawo | Initial creation with full Charter traceability |
+| Version | Date       | Author | Changes                                                |
+| ------- | ---------- | ------ | ------------------------------------------------------ |
+| 1.0.0   | 2026-06-19 | wasawo | Initial creation with full Charter traceability        |
+| 1.1.0   | 2026-06-19 | wasawo | Applied ChatGPT review feedback - clarity & governance |
 
 ---
 
-_This roadmap is the master execution plan for Phase 0. All activities trace back to Project Charter v1.0.0._
+_This roadmap is the master execution plan for Phase 0. All activities trace back to Project Charter v1.0.0. Timeline estimates may be adjusted based on actual progress and complexity._
