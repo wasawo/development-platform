@@ -36,7 +36,7 @@ Phase 0 is the **foundation phase** spanning 4 sequential phases (0-1 through 0-
 - All 6 Secondary Objectives mapped to phases
 - All 6 Success Criteria assigned to deliverables
 - All 9 Deliverables scheduled across phases
-- See [PHASE_0_ANALYSIS.md](./PHASE_0_ANALYSIS.md) for detailed mapping
+- See [PHASE_0_ANALYSIS.md](../test/PHASE_0_ANALYSIS.md) for detailed mapping
 
 ---
 
@@ -445,7 +445,7 @@ docs/
 ## 🔗 Related Documents
 
 - [Project Charter v1.0.0](../charter/project-charter.md) — Authoritative source
-- [PHASE_0_ANALYSIS.md](./PHASE_0_ANALYSIS.md) — Charter-to-Roadmap traceability
+- [PHASE_0_ANALYSIS.md](../test/PHASE_0_ANALYSIS.md) — Charter-to-Roadmap traceability
 - [docs/operations/ai-roles.md](../operations/ai-roles.md) — AI collaboration model
 - [README.md](../../README.md) — Project overview
 
