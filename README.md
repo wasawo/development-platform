@@ -153,6 +153,17 @@ development-platform/
 ├── infra/
 ├── scripts/
 ├── .github/
+│
+├─ handbook/
+│  ├─ ja/
+│  │   ├─ project-overview.md
+│  │   ├─ ai-roles-guide.md
+│  │   ├─ roadmap-guide.md
+│  │   ├─ architecture-guide.md
+│  │   └─ glossary.md
+│  │
+│  └─ README.md
+│
 └── README.md
 ```
 
