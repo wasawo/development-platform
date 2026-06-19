@@ -58,23 +58,23 @@ Establish an AI-assisted development platform that enables efficient personal so
 
 ## Phase Progress
 
-### Phase 0-1 : Management Foundation
+### Phase 0-1: Management Foundation
 
 - [x] GitHub repository created
-- [ ] Documentation structure established
-- [ ] AI role definitions completed
+- [x] Documentation structure established
+- [x] AI role definitions completed
 
-### Phase 0-2 : PC Environment Setup
+### Phase 0-2: PC Environment Setup
 
 - [ ] Windows development environment (PC1)
 - [ ] Linux migration and setup (PC2 → Ubuntu 24.04)
 
-### Phase 0-3 : Execution Foundation
+### Phase 0-3: Execution Foundation
 
 - [ ] Docker / Dev Container setup
 - [ ] Sample API operational
 
-### Phase 0-4 : Automation and Completion
+### Phase 0-4: Automation and Completion
 
 - [ ] CI/CD operational (GitHub Actions)
 - [ ] Project template completed
@@ -90,7 +90,7 @@ Establish an AI-assisted development platform that enables efficient personal so
 | Gemini     | Research Analyst / Technology Research             | Latest information, Google ecosystem             |
 | MS Copilot | Coding Assistant / Implementation Support          | VSCode integration, code completion              |
 
-> Detailed definitions: [docs/ai-roles.md](docs/ai-roles.md)
+> Detailed definitions: [docs/operations/ai-roles.md](docs/operations/ai-roles.md)
 
 ### Collaboration Principle
 
@@ -104,8 +104,9 @@ Final decisions are made by the project owner based on documented project decisi
 
 Current Status:
 
-Project Charter is under creation.
-Until its approval, README serves as the temporary project overview document.
+✅ Project Charter v1.0.0 approved.  
+✅ AI Roles & Responsibilities defined.  
+Documentation structure is now operational.
 
 All project decisions must be documented in this repository.
 
